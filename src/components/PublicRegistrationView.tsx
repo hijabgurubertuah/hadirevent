@@ -148,27 +148,29 @@ export const PublicRegistrationView: React.FC<PublicRegistrationViewProps> = ({
         </p>
 
         {/* Sub Tabs Toggle */}
-        <div className="inline-flex bg-white/15 backdrop-blur-md p-1 rounded-2xl gap-1 text-xs font-semibold mt-5 border border-white/20">
-          <button
-            onClick={() => setActivePortalTab('register')}
-            className={`px-5 py-2.5 rounded-xl transition-all ${
-              activePortalTab === 'register'
-                ? 'bg-white text-blue-900 shadow-md font-bold'
-                : 'text-white hover:bg-white/10'
-            }`}
-          >
-            Formulir Pendaftaran Event
-          </button>
-          <button
-            onClick={() => setActivePortalTab('search')}
-            className={`px-5 py-2.5 rounded-xl transition-all ${
-              activePortalTab === 'search'
-                ? 'bg-white text-blue-900 shadow-md font-bold'
-                : 'text-white hover:bg-white/10'
-            }`}
-          >
-            Cari Tiket QR Saya
-          </button>
+        <div className="w-full sm:w-auto inline-flex justify-center mt-5">
+          <div className="grid grid-cols-2 sm:flex bg-white/15 backdrop-blur-md p-1 rounded-2xl gap-1 text-xs font-semibold border border-white/20 w-full sm:w-auto max-w-md">
+            <button
+              onClick={() => setActivePortalTab('register')}
+              className={`px-3 sm:px-5 py-2.5 rounded-xl transition-all text-center min-h-[40px] flex items-center justify-center ${
+                activePortalTab === 'register'
+                  ? 'bg-white text-blue-900 shadow-md font-bold'
+                  : 'text-white hover:bg-white/10'
+              }`}
+            >
+              <span>Formulir Pendaftaran</span>
+            </button>
+            <button
+              onClick={() => setActivePortalTab('search')}
+              className={`px-3 sm:px-5 py-2.5 rounded-xl transition-all text-center min-h-[40px] flex items-center justify-center ${
+                activePortalTab === 'search'
+                  ? 'bg-white text-blue-900 shadow-md font-bold'
+                  : 'text-white hover:bg-white/10'
+              }`}
+            >
+              <span>Cari Tiket QR Saya</span>
+            </button>
+          </div>
         </div>
       </div>
 

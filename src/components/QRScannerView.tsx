@@ -191,7 +191,7 @@ export const QRScannerView: React.FC = () => {
       />
 
       {/* Top Banner Info */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-xs">
         <div>
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-orange-50 text-orange-700 text-xs font-semibold mb-1">
             <QrCode className="w-3.5 h-3.5" />
@@ -205,52 +205,54 @@ export const QRScannerView: React.FC = () => {
           </p>
         </div>
 
-        {/* Mode Selector */}
-        <div className="flex bg-slate-100 p-1.5 rounded-2xl gap-1 text-xs font-semibold shrink-0">
-          <button
-            onClick={() => setScanMode('camera')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              scanMode === 'camera'
-                ? 'bg-orange-500 text-white shadow-xs font-bold'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Camera className="w-4 h-4" />
-            <span>Kamera Live</span>
-          </button>
-          <button
-            onClick={() => setScanMode('simulator')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              scanMode === 'simulator'
-                ? 'bg-blue-600 text-white shadow-xs font-bold'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Sparkles className="w-4 h-4" />
-            <span>Simulasi Cepat</span>
-          </button>
-          <button
-            onClick={() => setScanMode('upload')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              scanMode === 'upload'
-                ? 'bg-blue-600 text-white shadow-xs font-bold'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Upload className="w-4 h-4" />
-            <span>Unggah Foto</span>
-          </button>
-          <button
-            onClick={() => setScanMode('manual')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              scanMode === 'manual'
-                ? 'bg-blue-600 text-white shadow-xs font-bold'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Keyboard className="w-4 h-4" />
-            <span>Ketik Kode</span>
-          </button>
+        {/* Mode Selector Tabs */}
+        <div className="w-full sm:w-auto overflow-x-auto no-scrollbar -mx-1 sm:mx-0 px-1 sm:px-0 py-1">
+          <div className="flex bg-slate-100 p-1.5 rounded-2xl gap-1 text-xs font-semibold shrink-0 w-max sm:w-auto">
+            <button
+              onClick={() => setScanMode('camera')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                scanMode === 'camera'
+                  ? 'bg-orange-500 text-white shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <Camera className="w-4 h-4 shrink-0" />
+              <span>Kamera Live</span>
+            </button>
+            <button
+              onClick={() => setScanMode('simulator')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                scanMode === 'simulator'
+                  ? 'bg-blue-600 text-white shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <Sparkles className="w-4 h-4 shrink-0" />
+              <span>Simulasi Cepat</span>
+            </button>
+            <button
+              onClick={() => setScanMode('upload')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                scanMode === 'upload'
+                  ? 'bg-blue-600 text-white shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <Upload className="w-4 h-4 shrink-0" />
+              <span>Unggah Foto</span>
+            </button>
+            <button
+              onClick={() => setScanMode('manual')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                scanMode === 'manual'
+                  ? 'bg-blue-600 text-white shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <Keyboard className="w-4 h-4 shrink-0" />
+              <span>Ketik Kode</span>
+            </button>
+          </div>
         </div>
       </div>
 

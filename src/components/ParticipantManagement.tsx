@@ -170,7 +170,7 @@ Siti Nurhaliza, siti.nur@kemenkeu.go.id, 081399887766, Kementerian Keuangan RI, 
   return (
     <div className="space-y-6 animate-in fade-in duration-300">
       {/* Header Info */}
-      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-6 rounded-2xl border border-slate-200 shadow-xs">
+      <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4 bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-xs">
         <div>
           <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold mb-1">
             <Users className="w-3.5 h-3.5" />
@@ -185,51 +185,53 @@ Siti Nurhaliza, siti.nur@kemenkeu.go.id, 081399887766, Kementerian Keuangan RI, 
         </div>
 
         {/* Sub Navigation Tabs */}
-        <div className="flex bg-slate-100 p-1.5 rounded-2xl gap-1 text-xs font-semibold shrink-0">
-          <button
-            onClick={() => setActiveSubTab('list')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              activeSubTab === 'list'
-                ? 'bg-white text-blue-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Users className="w-4 h-4" />
-            <span>Daftar Peserta</span>
-          </button>
-          <button
-            onClick={() => setActiveSubTab('manual')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              activeSubTab === 'manual'
-                ? 'bg-white text-blue-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <UserPlus className="w-4 h-4" />
-            <span>Tambah Satuan</span>
-          </button>
-          <button
-            onClick={() => setActiveSubTab('import')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              activeSubTab === 'import'
-                ? 'bg-white text-blue-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <FileSpreadsheet className="w-4 h-4" />
-            <span>Impor Massal</span>
-          </button>
-          <button
-            onClick={() => setActiveSubTab('broadcast')}
-            className={`px-3 py-2 rounded-xl flex items-center gap-1.5 transition-all ${
-              activeSubTab === 'broadcast'
-                ? 'bg-white text-indigo-700 shadow-xs'
-                : 'text-slate-600 hover:text-slate-900'
-            }`}
-          >
-            <Mail className="w-4 h-4 text-indigo-600" />
-            <span>Kirim Email Massal</span>
-          </button>
+        <div className="w-full sm:w-auto overflow-x-auto no-scrollbar -mx-1 sm:mx-0 px-1 sm:px-0 py-1">
+          <div className="flex bg-slate-100 p-1.5 rounded-2xl gap-1 text-xs font-semibold shrink-0 w-max sm:w-auto">
+            <button
+              onClick={() => setActiveSubTab('list')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                activeSubTab === 'list'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <Users className="w-4 h-4 shrink-0" />
+              <span>Daftar Peserta</span>
+            </button>
+            <button
+              onClick={() => setActiveSubTab('manual')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                activeSubTab === 'manual'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <UserPlus className="w-4 h-4 shrink-0" />
+              <span>Tambah Satuan</span>
+            </button>
+            <button
+              onClick={() => setActiveSubTab('import')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                activeSubTab === 'import'
+                  ? 'bg-white text-blue-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <FileSpreadsheet className="w-4 h-4 shrink-0" />
+              <span>Impor Massal</span>
+            </button>
+            <button
+              onClick={() => setActiveSubTab('broadcast')}
+              className={`px-3.5 py-2 rounded-xl flex items-center gap-1.5 transition-all shrink-0 whitespace-nowrap min-h-[38px] ${
+                activeSubTab === 'broadcast'
+                  ? 'bg-white text-indigo-700 shadow-xs font-bold'
+                  : 'text-slate-600 hover:text-slate-900'
+              }`}
+            >
+              <Mail className="w-4 h-4 text-indigo-600 shrink-0" />
+              <span>Kirim Email Massal</span>
+            </button>
+          </div>
         </div>
       </div>
 
