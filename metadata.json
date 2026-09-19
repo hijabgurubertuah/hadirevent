@@ -1,0 +1,7 @@
+{
+  "name": "HadirEvent - Sistem Kehadiran & Absensi QR Multi-Event",
+  "description": "Aplikasi manajemen kehadiran event berbasis QR code unik, pendaftaran mandiri & undangan, scan kehadiran real-time, dan rekap laporan analitik.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
